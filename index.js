@@ -6,10 +6,21 @@ const app = express();
 
 app.get("/", (req, res) => res.send("I am working"));
 app.post("/email", (req, res) => {
+  console.log(req);
+
   let form = new multiparty.Form();
 
   form.parse(req, (err, fields, files) => {
-    console.log(fields["stripped-html"][0]);
+    try {
+      console.log(fields["body-html"][0]);
+    } catch (e) {
+      console.log(e);
+    }
+    try {
+      console.log(fields["stripped-html"][0]);
+    } catch (e) {
+      console.log(e);
+    }
     res.send("Received");
   });
 });
