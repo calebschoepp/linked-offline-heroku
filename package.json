@@ -1,0 +1,25 @@
+{
+  "name": "linked-offline-heroku",
+  "version": "1.0.0",
+  "description": "Heroku backend for linked offline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebschoepp/linked-offline-heroku.git"
+  },
+  "author": "Caleb Schoepp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calebschoepp/linked-offline-heroku/issues"
+  },
+  "homepage": "https://github.com/calebschoepp/linked-offline-heroku#readme",
+  "engines": {
+    "node": "10.x"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
