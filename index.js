@@ -4,6 +4,8 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+
 app.get("/", (req, res) => res.send("I am working"));
 app.post("/email", (req, res) => {
   console.log(req);
