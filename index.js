@@ -8,11 +8,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => res.send("I am working"));
 app.post("/email", (req, res) => {
-  console.log(req);
-
-  let form = new multiparty.Form();
+  let form = new multiparty.Form({ maxFieldsSize: 6e6 });
 
   form.parse(req, (err, fields, files) => {
+    console.log(err);
     try {
       console.log(fields["body-html"][0]);
     } catch (e) {
