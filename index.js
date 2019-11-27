@@ -8,6 +8,7 @@ const app = express();
 
 app.get("/", (req, res) => res.send("I am working"));
 app.post("/email", (req, res) => {
+  console.log(req.headers["content-type"]);
   let form = new multiparty.Form({ maxFieldsSize: 6e6 });
 
   form.parse(req, (err, fields, files) => {
