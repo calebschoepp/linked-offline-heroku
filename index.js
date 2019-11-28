@@ -22,7 +22,7 @@ app.post("/email", (req, res) => {
 app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));
 
 function handleEncodedEmail(req, res) {
-  console.log(req.body);
+  console.log(req.body["stripped-html"]);
   res.send("Received");
 }
 
